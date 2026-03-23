@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Container */
+.container {
+  width: 350px;
+  margin: 60px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Input */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-section button {
+  padding: 10px 15px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+}
+
+.input-section button:hover {
+  background: #45a049;
+}
+
+/* List */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 8px 0;
+  background: #fafafa;
+  animation: fadeIn 0.3s ease;
+}
+
+li:hover {
+  background: #f0f0f0;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+li button:hover {
+  transform: scale(1.2);
+}
+
+li.removing {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: 0.2s;
+}
+
+.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.filters button {
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.filters button:hover {
+  background: #ddd;
+}
+
+/* Counter */
+#taskCount {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+}
+
+body.dark li {
+  background: #2a2a2a;
+}
+
+body.dark input {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
